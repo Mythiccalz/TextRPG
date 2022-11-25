@@ -6,6 +6,11 @@ dabloonrandomizer = random.choice(possibledabloons)
 dabloonsgot = dabloonrandomizer
 dabloons = 0
 shop = "soup: 2DB drink: 1DB"
+nextmove = ""
+moveaftersoup = ""
+moveafterdrink = ""
+soupchoice = ""
+drinkchoice = ""
 
 if move == "walk":
     print("you found "+str(dabloonrandomizer)+" dabloons!")
@@ -58,11 +63,11 @@ if moveafterdrink == "walk":
     print("you now have "+str(dabloons)+" dabloons!")
 elif moveafterdrink == "items":
     print("items: drink")
-    soupchoice = input("would you like to drink drink(y/n)? :")
-    if soupchoice == "y":
+    drinkchoice = input("would you like to drink drink(y/n)? :")
+    if drinkchoice == "y":
         print("you drank drink!")
         print("it does nothing.")
-    elif soupchoice == "n":
+    elif drinkchoice == "n":
         print("ok, you didnt drink drink.")
-elif moveaftersoup == "end":
+elif moveafterdrink == "end":
     print("ok! be safe traveller :]")
