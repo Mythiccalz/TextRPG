@@ -11,6 +11,10 @@ moveaftersoup = ""
 moveafterdrink = ""
 soupchoice = ""
 drinkchoice = ""
+buydrink = ""
+boughtdrink = ""
+buysoup = ""
+boughtsoup = ""
 
 if move == "walk":
     print("you found "+str(dabloonrandomizer)+" dabloons!")
@@ -44,6 +48,22 @@ if moveaftersoup == "walk":
     print("you found "+str(dabloonrandomizer)+" dabloons!")
     dabloons = dabloonsgot
     print("you now have "+str(dabloons)+" dabloons!")
+    nextmove = input("would you like to go to the shop(y/n)? :")
+    if nextmove == "y":
+        print("welcome to the shop!")
+        print("what would you like?")
+        print("drink 1DB")
+        buydrink = input("would you like to buy drink(y/n)? :")
+        if buydrink == "y":
+            print("ok! here you go!")
+            boughtdrink = input("would you like to drink drink(y/n)? :")
+            if boughtdrink == "y":
+                print("you drank drink!")
+                print("it does nothing.")
+            elif boughtdrink == "n":
+                print("ok")
+        elif buydrink == "n":
+            print("ok! be safe traveller :]")
 elif moveaftersoup == "items":
     print("items: soup")
     soupchoice = input("would you like to drink soup(y/n)? :")
@@ -61,6 +81,21 @@ if moveafterdrink == "walk":
     print("you found "+str(dabloonrandomizer)+" dabloons!")
     dabloons = dabloonsgot
     print("you now have "+str(dabloons)+" dabloons!")
+    if nextmove == "y":
+        print("welcome to the shop!")
+        print("what would you like?")
+        print("soup 2DB")
+        buysoup = input("would you like to buy soup(y/n)? :")
+        if buysoup == "y":
+            print("ok! here you go!")
+            boughtsoup = input("would you like to drink soup(y/n)? :")
+            if boughtsoup == "y":
+                print("you drank soup!")
+                print("it does nothing.")
+            elif boughtsoup == "n":
+                print("ok")
+        elif buysoup == "n":
+            print("ok! be safe traveller :]")
 elif moveafterdrink == "items":
     print("items: drink")
     drinkchoice = input("would you like to drink drink(y/n)? :")
