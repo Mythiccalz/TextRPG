@@ -95,6 +95,24 @@ if moveaftersoup == "walk":
                 print("it does nothing.")
             elif boughtdrink == "n":
                 print("ok")
+                nextmove = input("what would you like to do? walk, items or end? :")
+                if nextmove == "walk":
+                    print("you got "+str(dabloonrandomizer)+" dabloons!")
+                elif nextmove == "items":
+                    print("soup")
+                    nextmove = input("would you like to drink soup(y/n)? :")
+                    if nextmove == "y":
+                        print("you drank soup!")
+                        print("it does nothing.")
+                        nextmove = input("what would you like to do next? walk or end? :")
+                        if nextmove == "walk":
+                            print("you got "+str(dabloonrandomizer)+" dabloons!")
+                        elif nextmove == "end":
+                            print("be safe traveller :]")
+                    elif nextmove == "n":
+                        print("ok")
+                elif nextmove == "end":
+                    print("be safe traveller :)")
         elif buydrink == "n":
             print("ok! be safe traveller :]")
 elif moveaftersoup == "items":
