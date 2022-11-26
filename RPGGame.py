@@ -74,6 +74,39 @@ if nextmove == "y":
     elif choice == "drink":
         print("here you go! be safe :)")
         moveafterdrink = input("what would you like to do? walk, items or end? :")
+elif nextmove == "n":
+    nextmove = input("what would you like to do? walk or end? :")
+    if nextmove == "walk":
+        print("you found "+str(dabloonrandomizer)+" dabloons!")
+        nextmove = input("what would you like to do? walk, shop or end? :")
+        if nextmove == "walk":
+            print("you found "+str(dabloonrandomizer)+" dabloons!")
+        elif nextmove == "shop":
+            print("welcome to the shop!")
+            print(shop)
+            choice = input("item:")
+            if choice == "soup":
+                print("here you go traveller!")
+                nextmove = input("would you like to drink soup(y/n)? :")
+                if nextmove == "y":
+                    print("you drank soup!")
+                    print("it does nothing.")
+                    print("the possibilities end here for now!")
+                elif nextmove == "n":
+                    print("ok")
+                    print("the possibilities end here for now!")
+            elif choice == "drink":
+                print("here you go :]")
+                nextmove = input("would you like to drink drink(y/n)?")
+                if nextmove == "y":
+                    print("you drank drink!")
+                    print("it does nothing.")
+                    print("the possibilities end here for now!")
+                elif nextmove == "n":
+                    print("ok")
+                    print("the possibilities end here for now!")
+    elif nextmove == "end":
+        print("be safe traveller :]")
 
 #Move after soup.
 
